@@ -1,0 +1,65 @@
+body {
+    background-color: #f0f4f8;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Login Card */
+.login-card {
+    margin: 80px auto;
+    max-width: 420px;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.login-card .card-header {
+    background: linear-gradient(135deg, #0d6efd, #0a58ca);
+    color: white;
+    text-align: center;
+    padding: 24px;
+    border-radius: 16px 16px 0 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* Dashboard Cards */
+.stat-card {
+    border: none;
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+.stat-card.blue  { background: linear-gradient(135deg, #0d6efd, #0a58ca); }
+.stat-card.green { background: linear-gradient(135deg, #28a745, #1e7e34); }
+.stat-card.orange{ background: linear-gradient(135deg, #fd7e14, #dc6502); }
+
+/* Table Styling */
+.table thead {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.table tbody tr:hover {
+    background-color: #e8f0fe;
+}
+
+/* Alert Messages */
+.alert {
+    border-radius: 10px;
+}
+
+/* Quick Action Cards */
+.quick-card {
+    border-radius: 12px !important;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.quick-card:hover {
+    transform: translate(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12) !important;
+}
+
