@@ -114,10 +114,65 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                             >
                         </div>
                         
+                        <!-- Student ID -->
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">
+                                <i class="fas fa-id-card me-1 text-primary"></i>Student ID
+                            </label>
+                            <input
+                                type = "text"
+                                name = "student_id"
+                                class = "form-control"
+                                placeholder = "e.g. STU2024001"
+                                required
+                            >
+                        </div>
+
+                        <!-- Department -->
+                        <div class="mb-3">
+                            <lable class="form-label fw-semibold">
+                                <i class="fas fa-building me-1 text-primary"></i>Department
+                            </lable>
+                            <select name="department" class="form-select" required>
+                                <option value="">-- Select Department --</option>
+                                <option value="Software Engineering">Software Engineering</option>
+                                <option value="Computer Science">Computer Science</option>
+                                <option value="Information Technology">Information Technology</option>
+                                <option value="Electrical Engineering">Electrical Enginnering</option>
+                                <option value="Business Management">Business Management</option>
+                            </select>
+
+                        </div>
+
+                        <!-- Year -->
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">
+                                <i class="fas fa-calendar me-1 text-primary"></i>Academic Year
+                            </label>
+                            <select name="year" class="form-select" required>
+                                <option value="">-- Select Year --</option>
+                                <option value="1">Year 1 </option>
+                                <option value="2">Year 2 </option>
+                                <option value="3">Year 3 </option>
+                                <option value="4">Year 4 </option>
+                            </select>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary px-4">
+                                <i class="fas fa-save me-2"></i>Add Student
+                            </button>
+                            <a href="dashboard.php" class="btn btn-outline-secondary px-4">
+                                <i class="fas fa-times me-2"></i>Cancel
+                            </a>
+                        </div>
 
                     </form>
-
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<?php require_once '../include/footer.php'; ?>
