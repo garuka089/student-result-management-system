@@ -55,7 +55,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     </div>
 
     <div class="row justify-content-center">
-        <div class="col-md-7">
+        <div class="col-mb-7">
             <div class="card border-0 shadow-sm rounded-3">
                 <div class="card-header bg-primary text-white fw-bold py-3 rounded-top">
                     <i class="fas fa-user-graduate me-2"></i>Student Information
@@ -73,8 +73,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                     <form method="POST" action="">
 
                         <!-- full Name -->
-                        <div class="md-3">
-                            <label class="form-lable fw-semibold">
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">
                                 <i class="fas fa-user me-1 text-primary"></i>Full name
                             </label>
                             <input 
@@ -102,9 +102,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                         
                         <!-- password -->
                         <div class="mb-3">
-                            <lable class="form-lable fw-semibold">
+                            <label class="form-label fw-semibold">
                                 <i class="fas fa-lock me-1 text-primary"></i>password
-                            </lable>
+                            </label>
                             <input
                                 type = "password"
                                 name = "password"
@@ -130,9 +130,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
                         <!-- Department -->
                         <div class="mb-3">
-                            <lable class="form-label fw-semibold">
+                            <label class="form-label fw-semibold">
                                 <i class="fas fa-building me-1 text-primary"></i>Department
-                            </lable>
+                            </label>
                             <select name="department" class="form-select" required>
                                 <option value="">-- Select Department --</option>
                                 <option value="Software Engineering">Software Engineering</option>

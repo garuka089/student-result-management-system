@@ -84,7 +84,37 @@ $totalMarks = $pdo->query("SELECT COUNT(*) FROM marks")->fetchColumn();
             <div class="col-md-3">
                 <a href="add_student.php" class="text-decoration-none"> 
                     <div class="card text-center p-3 h-100 shadow-sm border-0 quick-card">
-                        <i class="fas fa-book-open fa-2x tex-dnger mb-2"></i>
+                        <i class="fas fa-user-plus fa-2x test-primary mb-2"></i>
+                        <p class="mb-0 fw-semibold">Add Student</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Add Marks -->
+            <div class="col-md-3">
+                <a href="add_marks.php" class="text-decoration-none">
+                    <div class="card text-center p-3 h-100 shadow-sm border-0 quick-card">
+                        <i class="fas fa-users fa-2x text-warning mb-2"></i>
+                        <p class="mb-0 fw-semibold">Manage Student</p>
+                    </div>
+                </a>
+            </div>    
+
+            <!-- Manage Student -->
+            <div class="col-md-3">
+                <a href="manage_students.php" class="text-decoration-none">
+                    <div class="card text-center p-3 h-100 shadow-sm border-0 quick-card">
+                        <i class="fas fa-users fa-2x text-warning mb-2"></i>
+                        <p class="mb-0 fw-semibold">Manage Student</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Add Subject -->
+            <div class="col-md-3">
+                <a href="add_subject.php" class="text-decoration-none">
+                    <div class="card text-center p-3 h-100 shadow-sm border-0 quick-card">
+                        <i class="fas fa-book-open fa-2x text-danger mb-2"></i>
                         <p class="mb-0 fw-semibold">Add Subject</p>
                     </div>
                 </a>
@@ -92,7 +122,7 @@ $totalMarks = $pdo->query("SELECT COUNT(*) FROM marks")->fetchColumn();
         </div>
     </div>
 
-    <!-- REcent Students Table -->
+    <!-- Recent Students Table -->
     <div class="card border-0 shadow-sm">
         <div class="card-header bg-white fw-bold py-3">
             <i class="fas fa-clock me-2 text-primary"></i>Recently Added Student
