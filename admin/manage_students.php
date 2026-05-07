@@ -11,7 +11,7 @@ if(isset($_GET['delete_id'])){
     $delete_id = $_GET['delete_id'];
 
     // Get the user_id linked to this student
-    $getUSer = $pdo->prepare("SELCT user_id FROM student WHERE id = ?");
+    $getUSer = $pdo->prepare("SELECT user_id FROM student WHERE id = ?");
     $getUSer->execute([$delete_id]);
     $userData = $getUSer->fetch(PDO::FETCH_ASSOC);
 
@@ -34,7 +34,7 @@ if(isset($_GET['delete_id'])){
 // Fetch all from the Database
 // Join student table with user table to get the name and email
 $stmt = $pdo->query("
-    SELECT s.id, u.name, u.email, s.student_id, s.departmnet, s.year
+    SELECT s.id, u.name, u.email, s.student_id, s.department, s.year
     FROM student s
     JOIN users u ON s.user_id = u.id
     ORDER BY s.id DESC
@@ -48,8 +48,8 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="d-flex align-items-center justify-content-between mb-4">
         <div class="d-flex align-items-center">
             <!-- Back button to dashboard -->
-            <a href="dashboard.php" cal_days_in_monthbtn btn-outline-primary btn-sm- me-3>
-                <i class="fas fa-arror-left me-1"></i> Back
+            <a href="dashboard.php" class="btn btn-outline-primary btn-sm me-3">
+                <i class="fas fa-arrow-left me-1"></i> Back
             </a>
             <h3 class="fw-bold mb-0">
                 <i class="fas fa-users me-2 text-warning"></i> Manage Students
@@ -64,12 +64,12 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <!-- Show success massage if student was deleted -->
     <?php if($sucess): ?>
-        <div class="alert aleet-success"><?= $sucess ?></div>
+        <div class="alert alert-success"><?= $sucess ?></div>
     <?php endif; ?>
 
     <!-- Show an erro message if somethong went wrong -->
     <?php if($error): ?>
-        <div class="alert alert=danger"><?= $error ?></div>
+        <div class="alert alert-danger"><?= $error ?></div>
     <?php endif; ?>
 
     <!-- Student table -->
@@ -78,7 +78,7 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <span class="badge bg-warning text-dark ms-2"><?= count($students) ?></span>
     </div>
 
-    <div class="card-bpdy p-0">
+    <div class="card-body p-0">
         <table class="table table-hover mb-0">
             <thead>
                 <tr>
@@ -146,4 +146,4 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </div>
 
-<?php require_once '../include/footer.php;'?>
+<?php require_once '../include/footer.php';?>
