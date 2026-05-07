@@ -94,8 +94,8 @@ $totalMarks = $pdo->query("SELECT COUNT(*) FROM marks")->fetchColumn();
             <div class="col-md-3">
                 <a href="add_marks.php" class="text-decoration-none">
                     <div class="card text-center p-3 h-100 shadow-sm border-0 quick-card">
-                        <i class="fas fa-users fa-2x text-warning mb-2"></i>
-                        <p class="mb-0 fw-semibold">Manage Student</p>
+                        <i class="fas fa-pen fa-2x text-success mb-2"></i>
+                        <p class="mb-0 fw-semibold">Add Marks</p>
                     </div>
                 </a>
             </div>    
