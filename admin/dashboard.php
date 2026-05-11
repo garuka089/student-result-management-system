@@ -154,11 +154,11 @@ $totalMarks = $pdo->query("SELECT COUNT(*) FROM marks")->fetchColumn();
                         $i = 1;
                         foreach($students as $student): ?>
                             <tr>
-                                <td><?= $i++ ?>></td>
-                                <td><?= htmlspecialchars($student['name']) ?>></td>
-                                <td><?= htmlspecialchars($student['student_id']) ?>></td>
+                                <td><?= $i++ ?></td>
+                                <td><?= htmlspecialchars($student['name']) ?></td>
+                                <td><?= htmlspecialchars($student['student_id']) ?></td>
                                 <td><?= htmlspecialchars($student['department']) ?></td>
-                                <td>Year <?= $student['year'] ?>></td>
+                                <td>Year <?= $student['year'] ?></td>
                             </tr>
                         <?php endforeach;
                     else: ?>
